@@ -1,9 +1,12 @@
 package model;
 
 import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 
+@Component
+@Scope("prototype")
 public class student {
         private String name;
         private String email;
