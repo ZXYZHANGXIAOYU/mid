@@ -10,6 +10,7 @@ public class studentDAOImpl extends AbstractstudentDAO {
     public void insertstudent(model.student student) {
         String INSERT_Student="INSERT INTO student(id,name,sex,email,score) VALUE(?,?,?)";
         Object[] args = {student.getId(),student.getEmail(),student.getName(),student.getSex(),student.getScore()};
+        jdbcTemplate.update(INSERT_Student, args);
     }
 
     @Override

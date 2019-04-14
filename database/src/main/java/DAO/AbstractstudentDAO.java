@@ -1,11 +1,13 @@
 package DAO;
 
 import model.student;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.util.List;
 
 public abstract class AbstractstudentDAO implements studentDAO{
     List<model.student> student;
+    JdbcTemplate jdbcTemplate;
 
     @Override
     public void insertstudent(model.student student) {

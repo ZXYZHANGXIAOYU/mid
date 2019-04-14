@@ -3,6 +3,7 @@ package model;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @Component
@@ -53,4 +54,15 @@ public class student {
         public void setScore(List<String> score) {
             this.score = score;
         }
+
+    @Override
+    public String toString() {
+        return "Book{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", sex=" + sex +
+                ", score=" + score +
+                ", email=" + email+
+                '}';
+    }
 }
